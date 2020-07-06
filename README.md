@@ -1,3 +1,2 @@
-# hello-world
-
-hello，I'm dongdong-q！
+wei dongshan
+s3c2440 bare mental code
