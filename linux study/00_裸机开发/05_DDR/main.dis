@@ -1,0 +1,52 @@
+
+main.o:     file format elf32-littlearm
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	e92d4800 	push	{fp, lr}
+   4:	e28db004 	add	fp, sp, #4	; 0x4
+   8:	ebfffffe 	bl	0 <uart_init>
+   c:	e59f0008 	ldr	r0, [pc, #8]	; 1c <main+0x1c>
+  10:	ebfffffe 	bl	0 <myputs>
+  14:	ebfffffe 	bl	0 <mygetc>
+  18:	eafffffd 	b	14 <main+0x14>
+  1c:	00000000 	.word	0x00000000
+Disassembly of section .rodata:
+
+00000000 <.rodata>:
+   0:	74726175 	ldrbtvc	r6, [r2], #-373
+   4:	73692030 	cmnvc	r9, #48	; 0x30
+   8:	69727020 	ldmdbvs	r2!, {r5, ip, sp, lr}^
+   c:	6e69746e 	cdpvs	4, 6, cr7, cr9, cr14, {3}
+  10:	2e2e2067 	cdpcs	0, 2, cr2, cr14, cr7, {3}
+  14:	0d0a202e 	stceq	0, cr2, [sl, #-184]
+  18:	00000000 	andeq	r0, r0, r0
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	43434700 	movtmi	r4, #14080	; 0x3700
+   4:	5328203a 	teqpl	r8, #58	; 0x3a
+   8:	6372756f 	cmnvs	r2, #465567744	; 0x1bc00000
+   c:	20797265 	rsbscs	r7, r9, r5, ror #4
+  10:	202b2b47 	eorcs	r2, fp, r7, asr #22
+  14:	6574694c 	ldrbvs	r6, [r4, #-2380]!
+  18:	30303220 	eorscc	r3, r0, r0, lsr #4
+  1c:	2d337138 	ldfcss	f7, [r3, #-224]!
+  20:	20293237 	eorcs	r3, r9, r7, lsr r2
+  24:	2e332e34 	mrccs	14, 1, r2, cr3, cr4, {1}
+  28:	Address 0x00000028 is out of bounds.
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002741 	andeq	r2, r0, r1, asr #14
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	0000001d 	andeq	r0, r0, sp, lsl r0
+  10:	00543405 	subseq	r3, r4, r5, lsl #8
+  14:	01080206 	tsteq	r8, r6, lsl #4
+  18:	01140412 	tsteq	r4, r2, lsl r4
+  1c:	03170115 	tsteq	r7, #1073741829	; 0x40000005
+  20:	01190118 	tsteq	r9, r8, lsl r1
+  24:	061e021a 	undefined

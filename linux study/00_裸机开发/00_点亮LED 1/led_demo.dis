@@ -1,0 +1,137 @@
+
+led.elf:     file format elf32-littlearm
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	e3a0da01 	mov	sp, #4096	; 0x1000
+   4:	eb000000 	bl	c <main>
+
+00000008 <halt>:
+   8:	eafffffe 	b	8 <halt>
+
+0000000c <main>:
+   c:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
+  10:	e28db000 	add	fp, sp, #0	; 0x0
+  14:	e24dd014 	sub	sp, sp, #20	; 0x14
+  18:	e3a02456 	mov	r2, #1442840576	; 0x56000000
+  1c:	e2822050 	add	r2, r2, #80	; 0x50
+  20:	e3a03456 	mov	r3, #1442840576	; 0x56000000
+  24:	e2833050 	add	r3, r3, #80	; 0x50
+  28:	e5933000 	ldr	r3, [r3]
+  2c:	e3c33c3f 	bic	r3, r3, #16128	; 0x3f00
+  30:	e3c33033 	bic	r3, r3, #51	; 0x33
+  34:	e5823000 	str	r3, [r2]
+  38:	e3a02456 	mov	r2, #1442840576	; 0x56000000
+  3c:	e2822050 	add	r2, r2, #80	; 0x50
+  40:	e3a03456 	mov	r3, #1442840576	; 0x56000000
+  44:	e2833050 	add	r3, r3, #80	; 0x50
+  48:	e5933000 	ldr	r3, [r3]
+  4c:	e3833c15 	orr	r3, r3, #5376	; 0x1500
+  50:	e5823000 	str	r3, [r2]
+  54:	e3a02456 	mov	r2, #1442840576	; 0x56000000
+  58:	e2822060 	add	r2, r2, #96	; 0x60
+  5c:	e3a03456 	mov	r3, #1442840576	; 0x56000000
+  60:	e2833060 	add	r3, r3, #96	; 0x60
+  64:	e5933000 	ldr	r3, [r3]
+  68:	e3c330c0 	bic	r3, r3, #192	; 0xc0
+  6c:	e5823000 	str	r3, [r2]
+  70:	e3a03456 	mov	r3, #1442840576	; 0x56000000
+  74:	e2833054 	add	r3, r3, #84	; 0x54
+  78:	e5933000 	ldr	r3, [r3]
+  7c:	e2033001 	and	r3, r3, #1	; 0x1
+  80:	e50b3010 	str	r3, [fp, #-16]
+  84:	e3a03456 	mov	r3, #1442840576	; 0x56000000
+  88:	e2833054 	add	r3, r3, #84	; 0x54
+  8c:	e5933000 	ldr	r3, [r3]
+  90:	e2033004 	and	r3, r3, #4	; 0x4
+  94:	e50b300c 	str	r3, [fp, #-12]
+  98:	e3a03456 	mov	r3, #1442840576	; 0x56000000
+  9c:	e2833064 	add	r3, r3, #100	; 0x64
+  a0:	e5933000 	ldr	r3, [r3]
+  a4:	e2033008 	and	r3, r3, #8	; 0x8
+  a8:	e50b3008 	str	r3, [fp, #-8]
+  ac:	e51b3010 	ldr	r3, [fp, #-16]
+  b0:	e3530000 	cmp	r3, #0	; 0x0
+  b4:	1a000007 	bne	d8 <main+0xcc>
+  b8:	e3a02456 	mov	r2, #1442840576	; 0x56000000
+  bc:	e2822054 	add	r2, r2, #84	; 0x54
+  c0:	e3a03456 	mov	r3, #1442840576	; 0x56000000
+  c4:	e2833054 	add	r3, r3, #84	; 0x54
+  c8:	e5933000 	ldr	r3, [r3]
+  cc:	e3c33040 	bic	r3, r3, #64	; 0x40
+  d0:	e5823000 	str	r3, [r2]
+  d4:	ea000006 	b	f4 <main+0xe8>
+  d8:	e3a02456 	mov	r2, #1442840576	; 0x56000000
+  dc:	e2822054 	add	r2, r2, #84	; 0x54
+  e0:	e3a03456 	mov	r3, #1442840576	; 0x56000000
+  e4:	e2833054 	add	r3, r3, #84	; 0x54
+  e8:	e5933000 	ldr	r3, [r3]
+  ec:	e3833040 	orr	r3, r3, #64	; 0x40
+  f0:	e5823000 	str	r3, [r2]
+  f4:	e51b300c 	ldr	r3, [fp, #-12]
+  f8:	e3530000 	cmp	r3, #0	; 0x0
+  fc:	1a000007 	bne	120 <main+0x114>
+ 100:	e3a02456 	mov	r2, #1442840576	; 0x56000000
+ 104:	e2822054 	add	r2, r2, #84	; 0x54
+ 108:	e3a03456 	mov	r3, #1442840576	; 0x56000000
+ 10c:	e2833054 	add	r3, r3, #84	; 0x54
+ 110:	e5933000 	ldr	r3, [r3]
+ 114:	e3c33020 	bic	r3, r3, #32	; 0x20
+ 118:	e5823000 	str	r3, [r2]
+ 11c:	ea000006 	b	13c <main+0x130>
+ 120:	e3a02456 	mov	r2, #1442840576	; 0x56000000
+ 124:	e2822054 	add	r2, r2, #84	; 0x54
+ 128:	e3a03456 	mov	r3, #1442840576	; 0x56000000
+ 12c:	e2833054 	add	r3, r3, #84	; 0x54
+ 130:	e5933000 	ldr	r3, [r3]
+ 134:	e3833020 	orr	r3, r3, #32	; 0x20
+ 138:	e5823000 	str	r3, [r2]
+ 13c:	e51b3008 	ldr	r3, [fp, #-8]
+ 140:	e3530000 	cmp	r3, #0	; 0x0
+ 144:	1a000007 	bne	168 <main+0x15c>
+ 148:	e3a02456 	mov	r2, #1442840576	; 0x56000000
+ 14c:	e2822054 	add	r2, r2, #84	; 0x54
+ 150:	e3a03456 	mov	r3, #1442840576	; 0x56000000
+ 154:	e2833054 	add	r3, r3, #84	; 0x54
+ 158:	e5933000 	ldr	r3, [r3]
+ 15c:	e3c33010 	bic	r3, r3, #16	; 0x10
+ 160:	e5823000 	str	r3, [r2]
+ 164:	eaffffc1 	b	70 <main+0x64>
+ 168:	e3a02456 	mov	r2, #1442840576	; 0x56000000
+ 16c:	e2822054 	add	r2, r2, #84	; 0x54
+ 170:	e3a03456 	mov	r3, #1442840576	; 0x56000000
+ 174:	e2833054 	add	r3, r3, #84	; 0x54
+ 178:	e5933000 	ldr	r3, [r3]
+ 17c:	e3833010 	orr	r3, r3, #16	; 0x10
+ 180:	e5823000 	str	r3, [r2]
+ 184:	eaffffb9 	b	70 <main+0x64>
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	43434700 	movtmi	r4, #14080	; 0x3700
+   4:	5328203a 	teqpl	r8, #58	; 0x3a
+   8:	6372756f 	cmnvs	r2, #465567744	; 0x1bc00000
+   c:	20797265 	rsbscs	r7, r9, r5, ror #4
+  10:	202b2b47 	eorcs	r2, fp, r7, asr #22
+  14:	6574694c 	ldrbvs	r6, [r4, #-2380]!
+  18:	30303220 	eorscc	r3, r0, r0, lsr #4
+  1c:	2d337138 	ldfcss	f7, [r3, #-224]!
+  20:	20293237 	eorcs	r3, r9, r7, lsr r2
+  24:	2e332e34 	mrccs	14, 1, r2, cr3, cr4, {1}
+  28:	Address 0x00000028 is out of bounds.
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002541 	andeq	r2, r0, r1, asr #10
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	0000001b 	andeq	r0, r0, fp, lsl r0
+  10:	00543405 	subseq	r3, r4, r5, lsl #8
+  14:	01080206 	tsteq	r8, r6, lsl #4
+  18:	01140412 	tsteq	r4, r2, lsl r4
+  1c:	03170115 	tsteq	r7, #1073741829	; 0x40000005
+  20:	01190118 	tsteq	r9, r8, lsl r1
+  24:	Address 0x00000024 is out of bounds.
+

@@ -1,0 +1,5 @@
+#define GPFCON (*((volatile unsigned int *)0x56000050))
+#define GPFDAT (*((volatile unsigned int *)0x56000054))
+#define GPGCON (*((volatile unsigned int *)0x56000060))
+#define GPGDAT (*((volatile unsigned int *)0x56000064))
+#define CLOCKBASE (*((volatile unsigned int *)0X4C000000))
