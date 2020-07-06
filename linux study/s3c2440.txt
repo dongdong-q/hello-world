@@ -1,0 +1,2 @@
+-linux编译，gcc -o hello hello.c，生成hello，可以运行
+-原理图，nled，n代表低电平有效
